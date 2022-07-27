@@ -51,11 +51,11 @@ public class CourseologyController {
     }
 
     // UPDATE
-    @PutMapping("/course/{id}")
-    public ResponseEntity<String> updateCourse(@RequestBody Course newCourse, @PathVariable String id) {
-        courseologyService.updateCourse(newCourse, id);
-        return ResponseEntity.status(HttpStatus.OK).body("Updated Course with ID : " + newCourse.getId());
-    }
+//    @PutMapping("/course/{id}")
+//    public ResponseEntity<String> updateCourse(@RequestBody Course newCourse, @PathVariable String id) {
+//        courseologyService.updateCourse(newCourse, id);
+//        return ResponseEntity.status(HttpStatus.OK).body("Updated Course with ID : " + newCourse.getId());
+//    }
 
     // DELETE
 
@@ -65,5 +65,4 @@ public class CourseologyController {
         courseologyService.deleteCourseById(id);
         return ResponseEntity.status(HttpStatus.OK).body("Course deleted");
     }
-}
 }

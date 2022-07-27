@@ -1,10 +1,12 @@
 package com.nology.courseology;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class CourseologyService {
     @Autowired
     CourseologyRepository courseologyRepository;
@@ -20,7 +22,6 @@ public class CourseologyService {
     void deleteCourseById (String id) {
         findCourseById(id);
         courseologyRepository.deleteByid(id);
-
     }
 
     Course findRandomCourse() {
@@ -37,6 +38,7 @@ public class CourseologyService {
         return courseologyRepository.findAll();
     }
 
-    public void createCourse(Course Course) {
+    public void createCourse(Course course) {
+        courseologyRepository.save(course);
     }
 }
