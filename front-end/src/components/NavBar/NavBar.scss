@@ -1,0 +1,16 @@
+
+.nav-bar {
+    background-color: navy;
+    width: 100%;
+    height: 40px;
+    display: grid;
+    color: white;
+    grid-template-columns: 120px 1fr;
+
+    * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
