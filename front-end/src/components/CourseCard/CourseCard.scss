@@ -1,0 +1,9 @@
+.course-card {
+    border: solid black 2px;
+    width: 300px;
+    text-decoration: none;
+
+    &__title {
+        font-size: 20px;
+    }
+}
