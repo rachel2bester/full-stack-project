@@ -6,13 +6,13 @@ import "./Home.scss"
 
 const Home = () => {
     const [courses, setCourses] = useState([]);
-    const [responseOK, setResponseOK] = useState(undefined);
+    // const [responseOK, setResponseOK] = useState(undefined);
 
     const url = "http://localhost:8080/courses";
     const getCourses = async () => {
         const response = await fetch(url);
         let data = await response.json();
-        setResponseOK(response.ok);
+        // setResponseOK(response.ok);
         setCourses(data);
     }
 

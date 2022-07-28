@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 public interface CourseologyRepository extends JpaRepository<Course, String> {
     Course findByid(String id);
 
-    Course deleteByid(String id);
+    void deleteByid(String id);
 }

@@ -22,15 +22,15 @@ public class Course {
     public Course() {
     }
 
-//    public Course(String id, String name, String category, int completionTime, double price, String description, String author) {
-//        this.id = id;
-//        this.name = name;
-//        this.category = category;
-//        this.completionTime = completionTime;
-//        this.price = price;
-//        this.description = description;
-//        this.author = author;
-//    }
+    public Course(String id, String name, String category, int completionTime, double price, String description, String author) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.completionTime = completionTime;
+        this.price = price;
+        this.description = description;
+        this.author = author;
+    }
 
     public void setId(String id) {
         this.id = id;

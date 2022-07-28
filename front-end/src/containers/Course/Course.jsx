@@ -8,12 +8,13 @@ const Course = ({baseURL}) => {
     const getCourse = async () => {
         const response = await fetch(baseURL + "course/" + courseId);
         let data = await response.json();
-        setCourse(data[0]);
+        console.log(data)
+        setCourse(data);
     }
 
-    // const deleteCourse = async() => {
-        
-    // }
+    const deleteCourse = async() => {
+        fetch(baseURL + "course/" + courseId, { method: 'DELETE' })
+    }
 
     useEffect(() => {
         getCourse();
@@ -21,8 +22,15 @@ const Course = ({baseURL}) => {
 
     return (
         <div>
-            {/* {course && {course.name}} */}
-            {/* <button onClick={deleteCourse}>Delete Course</button> */}
+            {course && <>
+                <h1>{course.name}</h1>
+                <p>Category: {course.category}</p>
+                <p>{course.description}</p>
+                <p>Price: {course.price}</p>
+                <p>Author: {course.author}</p>
+                <p>Completion Time: {course.completionTime}</p>
+            </>}
+            <button onClick={deleteCourse}>Delete Course</button>
         </div>
     )
 }

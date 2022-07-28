@@ -7,6 +7,10 @@
     color: white;
     grid-template-columns: 120px 1fr;
 
+    &__home {
+        color: white;
+    }
+
     * {
         display: flex;
         justify-content: center;
